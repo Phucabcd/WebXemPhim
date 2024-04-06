@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+</head>
+<style>
+    .wrapper {
+        background-color: rgb(0, 56, 58);
+        /* Thiết lập màu nền cho phần tử wrapper */
+    }
+
+    .chuphim :hover {
+        background-color: rgb(8, 73, 253);
+    }
+
+    .text-decoration-none a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .card-img-overlay:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Đổi màu nền khi hover */
+    }
+    .small-text{
+        font-size: 0.9rem;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <header class="">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light" href="#">ONLINE ENTERTAINMENT</a>
+                    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">MY FAVORITES</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    MY ACCOUNT
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Login</a></li>
+                                    <li><a class="dropdown-item" href="#">Registration</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                                    <li><a class="dropdown-item" href="#">Logoff</a></li>
+                                    <li><a class="dropdown-item" href="#">Change Password</a></li>
+                                    <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mx-auto order-0">
+                        <a class="navbar-brand form" href="#"><img
+                                src="https://animet.net/Theme_Anime/images/logo_2023.png" style="width:100px;"
+                                alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target=".dual-collapse2">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                        <ul class="navbar-nav ms-auto">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" style="width: 280px;"
+                                    placeholder="Tìm: tên phim, đạo diễn, thể loại..." aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit">Search</button>
+                            </form>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+
+        <main style="background-color: black;" class="container">
+
+            <div class="row mt-2">
+                <article class="col-md-9">
+                    <ul class="nav">
+                        <li class="chuphim nav-item">
+                            <a class="nav-link active" style="color: darkgray;" aria-current="page" href="#">Tất cả</a>
+                        </li>
+                        <li class="chuphim nav-item">
+                            <a class="nav-link" style="color: darkgray;" href="#">Hành động</a>
+                        </li>
+                        <li class="chuphim nav-item">
+                            <a class="nav-link" style="color: darkgray;" href="#">Hài hước</a>
+                        </li>
+                        <li class="chuphim nav-item">
+                            <a class="nav-link" style="color: darkgray;" href="#">Phép thuật</a>
+                        </li>
+                        <li class="chuphim nav-item">
+                            <a class="nav-link" style="color: darkgray;" href="#">Kinh dị</a>
+                        </li>
+                        <li class="chuphim nav-item">
+                            <a class="nav-link" style="color: darkgray;" href="#">Cute</a>
+                        </li>
+                    </ul>
+                    <div class="row mt-2">
+                        <div class="">
+                            <div class="mx-2 p-2" style="max-width: 100%;">
+                                <div class="d-flex flex-row"
+                                    style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                    <img class="card-img-top"
+                                        src="https://i0.wp.com/animet.net/upload/images/2024/01/mato-seihei-no-slave-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                        alt="Card image cap" style="width: 30%; height: auto;">
+                                    <div class="card-body p-2">
+                                        <h5 class="card-title"
+                                            style="color: gold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  font-size: 40px;">
+                                            Sand Land: The Series</h5>
+                                        <div class="text-light">
+                                            <h3>Vùng đất cát: Bộ truyện</h3>
+                                        </div>
+                                        <div class="text-light">
+                                            <p>Trong tương lai xa, chiến tranh đã hủy diệt toàn bộ Trái đất, chỉ để lại
+                                                một vùng đất hoang cằn cỗi, nơi nguồn cung cấp nước được kiểm soát bởi
+                                                tên vua tham lam. Để tìm kiếm một hồ nước đã mất tích từ lâu, cảnh sát
+                                                trưởng Rao đã nhờ đến sự giúp đỡ của vua quỷ... và bắt được con trai của
+                                                nhà vua, Beelzebub, và trợ lý của ông ta, Thief. Bộ ba bất ngờ cùng nhau
+                                                khởi hành băng qua sa mạc, đối mặt với rồng, kẻ cướp và kẻ thù nguy hiểm
+                                                nhất... chính quân đội của Nhà vua!</p>
+                                        </div>
+                                        <div class="d-flex mb-3 align-items-center mt-4"
+                                            style="color: #fff;  font-size: 10px;">
+                                            <ion-icon name="star-half-outline" style="font-size: 16px;"></ion-icon>
+                                            <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                            <ion-icon name="time-outline"
+                                                style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                            <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                            <ion-icon name="calendar-outline"
+                                                style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                            <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                        </div>
+                                        <div>
+                                            <div class="btn btn-danger" style="font-size: 12px;
+                                            padding: 5px 10px;
+                                            border-radius: 5px;">1,453 lượt xem
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div class="card" style="background-color: rgb(45, 50, 51);">
+                            <div class="card-header">
+                                <ul class="nav nav-pills card-header-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Thông tin phim</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="row text-light small-text">
+                                    <div class="col-md-6 ">
+                                        <div class="d-flex flex-column">
+                                            <h5>Trạng thái</h5>
+                                            <p>05/13 tập</p>
+                                           
+                                            <h5>Thể loại</h5>
+                                            <p>Hành động</p>
+                                           
+                                            <h5>Quốc gia</h5>
+                                            <p>Nhật Bản</p>
+                                           
+                                            <h5>Nhà sản xuất</h5>
+                                            <p>Sunrise, Anima, Kamikaze Douga</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Thời lượng</h5> <p>24 phút</p>
+                                        <h5>Độ phân giải</h5> <p>HD</p>
+                                        <h5>Chú ý</h5> <p>None</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-title gap-2 d-flex justify-content-end">
+                                <p class="btn btn-primary">Like</p>
+                                <p class="btn btn-danger">Share</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+                <aside class="col-md-3">
+                    <div class="list-group mt-3">
+                        <a href="#" class="list-group-item list-group-item-action active border-primary-subtle"
+                            style="background-color: rgb(45, 50, 51);" aria-current="true">
+                            <div class="w-100 justify-content-between">
+                                <h5 class="mb-1">Xem nhiều nhất</h5>
+                                <small>Ngày | Tuần | Tháng | Năm</small>
+                            </div>
+                            <hr class="border border-warning border-2 opacity-50 my-2">
+                            <div class="">
+                                <div class="d-flex justify-content-center">
+                                    <div class="mx-2" style="max-width: 100%;">
+                                        <div class="d-flex flex-row"
+                                            style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                            <img class="card-img-top"
+                                                src="https://i0.wp.com/animet.net/upload/images/2024/01/mato-seihei-no-slave-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                                alt="Card image cap" style="width: 30%; height: auto;">
+                                            <div class="card-body p-2">
+                                                <h5 class="card-title"
+                                                    style="color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  font-size: 15px;">
+                                                    Mato Seihei no Slave</h5>
+                                                <div class="d-flex mb-3 align-items-center mt-4"
+                                                    style="color: #fff;  font-size: 10px;">
+                                                    <ion-icon name="star-half-outline"
+                                                        style="font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                                    <ion-icon name="time-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                                    <ion-icon name="calendar-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                                </div>
+                                                <div>
+                                                    <div class="btn btn-danger" style="font-size: 12px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 5px;">1,453 lượt xem
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <div class="mx-2" style="max-width: 100%;">
+                                        <div class="d-flex flex-row"
+                                            style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                            <img class="card-img-top"
+                                                src="https://i0.wp.com/animet.net/upload/images/2023/03/chien-doi-vuong-dang-king-ohger-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                                alt="Card image cap" style="width: 30%; height: auto;">
+                                            <div class="card-body p-2">
+                                                <h5 class="card-title"
+                                                    style="color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 15px;">
+                                                    Ohsama Sentai King-Ohger</h5>
+                                                <div class="d-flex mb-3 align-items-center mt-4"
+                                                    style="color: #fff; font-size: 10px;">
+                                                    <ion-icon name="star-half-outline"
+                                                        style="font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                                    <ion-icon name="time-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                                    <ion-icon name="calendar-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                                </div>
+                                                <div>
+                                                    <div class="btn btn-danger" style="font-size: 12px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 5px;">1,453 lượt xem
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <div class="mx-2" style="max-width: 100%;">
+                                        <div class="d-flex flex-row"
+                                            style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                            <img class="card-img-top"
+                                                src="https://i0.wp.com/animet.net/upload/images/2019/08/ben-10-omniverse-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                                alt="Card image cap" style="width: 30%; height: auto;">
+                                            <div class="card-body p-2">
+                                                <h5 class="card-title"
+                                                    style="color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  font-size: 15px;">
+                                                    Ben 10: Omniverse
+                                                </h5>
+                                                <div class="d-flex mb-3 align-items-center mt-4"
+                                                    style="color: #fff;  font-size: 10px;">
+                                                    <ion-icon name="star-half-outline"
+                                                        style="font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                                    <ion-icon name="time-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                                    <ion-icon name="calendar-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                                </div>
+                                                <div>
+                                                    <div class="btn btn-danger" style="font-size: 12px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 5px;">1,453 lượt xem
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center">
+                                    <div class="mx-2" style="max-width: 100%;">
+                                        <div class="d-flex flex-row"
+                                            style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                            <img class="card-img-top"
+                                                src="https://i0.wp.com/animet.net/upload/images/2024/01/mato-seihei-no-slave-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                                alt="Card image cap" style="width: 30%; height: auto;">
+                                            <div class="card-body p-2">
+                                                <h5 class="card-title"
+                                                    style="color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  font-size: 15px;">
+                                                    Mato Seihei no Slave</h5>
+                                                <div class="d-flex mb-3 align-items-center mt-4"
+                                                    style="color: #fff;  font-size: 10px;">
+                                                    <ion-icon name="star-half-outline"
+                                                        style="font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                                    <ion-icon name="time-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                                    <ion-icon name="calendar-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                                </div>
+                                                <div>
+                                                    <div class="btn btn-danger" style="font-size: 12px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 5px;">1,453 lượt xem
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <div class="mx-2" style="max-width: 100%;">
+                                        <div class="d-flex flex-row"
+                                            style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                            <img class="card-img-top"
+                                                src="https://i0.wp.com/animet.net/upload/images/2023/03/chien-doi-vuong-dang-king-ohger-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                                alt="Card image cap" style="width: 30%; height: auto;">
+                                            <div class="card-body p-2">
+                                                <h5 class="card-title"
+                                                    style="color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 15px;">
+                                                    Ohsama Sentai King-Ohger</h5>
+                                                <div class="d-flex mb-3 align-items-center mt-4"
+                                                    style="color: #fff; font-size: 10px;">
+                                                    <ion-icon name="star-half-outline"
+                                                        style="font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                                    <ion-icon name="time-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                                    <ion-icon name="calendar-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                                </div>
+                                                <div>
+                                                    <div class="btn btn-danger" style="font-size: 12px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 5px;">1,453 lượt xem
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mt-2">
+                                    <div class="mx-2" style="max-width: 100%;">
+                                        <div class="d-flex flex-row"
+                                            style="background-color: rgb(45, 50, 51); border-radius: 10px; overflow: hidden;">
+                                            <img class="card-img-top"
+                                                src="https://i0.wp.com/animet.net/upload/images/2019/08/ben-10-omniverse-thumbnail.jpg?resize=215%2C320&ssl=1"
+                                                alt="Card image cap" style="width: 30%; height: auto;">
+                                            <div class="card-body p-2">
+                                                <h5 class="card-title"
+                                                    style="color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  font-size: 15px;">
+                                                    Ben 10: Omniverse
+                                                </h5>
+                                                <div class="d-flex mb-3 align-items-center mt-4"
+                                                    style="color: #fff;  font-size: 10px;">
+                                                    <ion-icon name="star-half-outline"
+                                                        style="font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">9.1</p>
+                                                    <ion-icon name="time-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">23 Phút</p>
+                                                    <ion-icon name="calendar-outline"
+                                                        style="margin-left: 10px; font-size: 16px;"></ion-icon>
+                                                    <p class="ml-1" style="margin-bottom: 0;">2024</p>
+                                                </div>
+                                                <div>
+                                                    <div class="btn btn-danger" style="font-size: 12px;
+                                                    padding: 5px 10px;
+                                                    border-radius: 5px;">1,453 lượt xem
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <div class="container mt-4">
+            <footer class=" text-center text-white">
+                <div class="container p-4 pb-0">
+                    <a class="navbar-brand form" href="#"><img src="https://animet.net/Theme_Anime/images/logo_2023.png"
+                            style="width:100px;" alt=""></a>
+                    <section class="mb-4">
+                        <a class="btn btn-outline-light btn-floating m-1" href=""><ion-icon
+                                name="logo-discord"></ion-icon> </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href=""><ion-icon
+                                name="logo-facebook"></ion-icon></a>
+                        <a class="btn btn-outline-light btn-floating m-1" href=""><ion-icon
+                                name="logo-octocat"></ion-icon> </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href=""><ion-icon
+                                name="logo-snapchat"></ion-icon> </a>
+                    </section>
+
+                </div>
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    ©2024 demo
+                    <a class="text-white" href="https://mdbootstrap.com/"></a>
+
+                </div>
+            </footer>
+        </div>
+        <div class="text-light text-center mt-3 pb-3 ">
+            <p>Liên hệ quảng cáo: info.animet@gmail.com</p>
+            <p>Animet.Net không chịu trách nhiệm đối với bất kỳ nội dung nào được đăng tải trong trang web này.
+                Mọi nội dung đều được sưu tầm và nhúng vào website tương tự như công cụ tìm kiếm Google.
+                Disclaimer: This site does not store any files on its server. All contents are provided by
+                non-affiliated third parties.
+                Copyright ® 2018 -2024 Animet.Net. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

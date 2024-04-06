@@ -1,0 +1,32 @@
+/*.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+        .panel-footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .thumbnail {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 4px;
+            background-color: #f8f9fa;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+        }*/
