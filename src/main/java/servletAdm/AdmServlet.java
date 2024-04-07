@@ -50,6 +50,8 @@ public class AdmServlet  extends HttpServlet{
 		req.setAttribute("user", user);
 		req.setAttribute("users", users);
 		
-		req.getRequestDispatcher("/view/adm/user/index.jsp").forward(req, resp);
+		req.setAttribute("page", "/view/adm/user/index.jsp");
+		
+		req.getRequestDispatcher("/view/adm/layout.jsp").forward(req, resp);
 	}
 }

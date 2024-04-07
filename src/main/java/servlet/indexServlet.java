@@ -34,7 +34,7 @@ public class indexServlet extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		VideoDAO vdao = new VideoDAOImpl();
 		FavoriteDAO fdao = new FavoriteDAOImpl();
-		UserDao udao = new UserDaoImpl();
+		
 		User userlog = (User) req.getSession().getAttribute("user");
 		if (userlog != null) {
 			req.setAttribute("ttdn", userlog.getFullname());

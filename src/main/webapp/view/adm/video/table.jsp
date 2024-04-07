@@ -2,7 +2,7 @@
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 
-<table border="1" style="width:100%">
+<table class="table table-bordered border-primary" border="1" style="width:100%">
     <thead>
         <tr>
             <th>Id</th>

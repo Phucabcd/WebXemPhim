@@ -79,8 +79,11 @@
 													mật khẩu</label>
 											</div>
 										</div>
+										<div class="text-center" >
+										<a style="text-decoration: none;  color: inherit;" href="/asmJava4/oe/account/login">Bạn đã có tải khoản?</a>
+										</div>
 										<b>${checkdk }</b>
-										<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+										<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4 mt-3">
 											<button class="btn btn-dark btn-lg">Đăng
 												ký</button>
 										</div>

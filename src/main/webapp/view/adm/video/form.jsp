@@ -23,7 +23,7 @@
         Description: <br>
         <input name="description" value="${video.description}">
     </div>
-    <div>
+    <div class="mt-3">
         <button formaction="${ctx}/create">Create</button>
         <button formaction="${ctx}/update">Update</button>
         <button formaction="${ctx}/delete">Delete</button>

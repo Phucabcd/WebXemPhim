@@ -12,7 +12,7 @@
 </head>
 <body>
 	<h3>VIDEO MANAGEMENT</h3>
-	<jsp:include page="form.jsp"/>
+	<jsp:include page="form.jsp"/> <br>
 	<jsp:include page="table.jsp"/>
 </body>
 </html>

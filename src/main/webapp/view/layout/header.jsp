@@ -1,3 +1,4 @@
+<%@page import="entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
@@ -27,13 +28,22 @@
 							<li><a class="dropdown-item" href="/asmJava4/oe/account/logoff">Logoff</a></li>
 							<li><a class="dropdown-item" href="/asmJava4/oe/account/change-password">Change Password</a></li>
 							<li><a class="dropdown-item" href="#">Edit Profile</a></li>
+							<% 
+								User user = (User) session.getAttribute("user");
+								if(user != null && user.isAdmin()){
+									%>
+									<li><a class="dropdown-item" href="/asmJava4/oe/adm/account/index">MANAGEMENT</a></li>
+									<%
+								} 
+							%>
+							
 						</ul></li>
 				</ul>
 				
 			</div>
 			<div class="mx-auto order-0">
 				<a class="navbar-brand form" href="#"><img
-					src="https://animet.net/Theme_Anime/images/logo_2023.png"
+					src="https://9anime.pe/images/logo.png"
 					style="width: 100px;" alt=""></a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="collapse" data-bs-target=".dual-collapse2">

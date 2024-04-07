@@ -16,7 +16,7 @@ import dao.VideoDAO;
 import dao.VideoDAOImpl;
 import entity.Video;
 
-@MultipartConfig
+
 @WebServlet({
 	"/oe/adm/video/index",
 	"/oe/adm/video/create",
@@ -51,7 +51,8 @@ public class AdmVideo extends HttpServlet {
 		req.setAttribute("video", video);
 		req.setAttribute("videos", videos);
 		
+		req.setAttribute("page", "/view/adm/video/index.jsp");
 		
-		req.getRequestDispatcher("/view/adm/video/index.jsp").forward(req, resp);
+		req.getRequestDispatcher("/view/adm/layout.jsp").forward(req, resp);
 	}
 }

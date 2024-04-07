@@ -27,10 +27,16 @@ public class accountLogin extends HttpServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String path = req.getServletPath();
 		if (path.contains("login")) {
+			User currentUser = (User) req.getSession().getAttribute("user");
+		    if (currentUser != null) {
+		       
+		        resp.sendRedirect("/asmJava4/oe/video/list");
+		        return; 
+		    }
 			String id = req.getParameter("id");
 			String password = req.getParameter("password");
 			if (id == null || password == null || id.isEmpty() || password.isEmpty()) {
-
+				
 			} else {
 				User user = dao.findById(id);
 				if (user == null) {
@@ -39,8 +45,10 @@ public class accountLogin extends HttpServlet {
 					req.setAttribute("message", "Sai mật khẩu");
 				} else {
 					req.getSession().setAttribute("user", user);
+
 					String backUrl = (String) req.getSession().getAttribute("backUrl");
 					if (backUrl != null) {
+						
 						req.getRequestDispatcher(backUrl).forward(req, resp);
 						return;
 					} else {

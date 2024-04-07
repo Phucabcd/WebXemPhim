@@ -20,8 +20,9 @@ import entity.User;
         "/oe/video/checkout",
         "/oe/video/favorite/*", 
         "/oe/video/like/*",
-        "/oe/account/logoff",
-        "/oe/adm/*"
+        "/oe/account/logoff"
+        
+        
         
 })
 public class AuthFilter implements Filter {
