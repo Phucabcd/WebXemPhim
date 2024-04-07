@@ -10,6 +10,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import entity.User;
 
@@ -20,7 +21,7 @@ import entity.User;
         "/oe/video/favorite/*", 
         "/oe/video/like/*",
         "/oe/account/logoff",
-        "/oe/oder/*",
+        "/oe/adm/*"
         
 })
 public class AuthFilter implements Filter {
@@ -34,6 +35,7 @@ public class AuthFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
+//        HttpSession session = req.getSession();
         User user = (User) req.getSession().getAttribute("user");
         if (user == null) {
             String path = req.getServletPath();

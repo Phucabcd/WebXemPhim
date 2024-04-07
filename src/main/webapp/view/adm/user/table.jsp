@@ -22,7 +22,7 @@
             <td>${u.email}</td>
             <td>${u.admin?'Admin':'User'}</td>
             <td>
-                <a href="${base}/edit/${u.id}">Edit</a>
+                <a href="${ctx}/edit/${u.id}">Edit</a>
             </td>
         </tr>
     </c:forEach>

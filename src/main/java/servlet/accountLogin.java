@@ -14,7 +14,12 @@ import dao.UserDao;
 import dao.UserDaoImpl;
 import entity.User;
 
-@WebServlet({ "/oe/account/login", "/oe/account/sign-up", "/oe/account/change-password", "/oe/account/logoff" })
+@WebServlet({ 
+	"/oe/account/login", 
+	"/oe/account/sign-up", 
+	"/oe/account/change-password", 
+	"/oe/account/logoff" 
+	})
 public class accountLogin extends HttpServlet {
 	UserDao dao = new UserDaoImpl();
 

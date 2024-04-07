@@ -12,9 +12,8 @@
         <input name="title" value="${video.title}">
     </div>
     <div>
-        Poster: (${video.poster})<br>
+    	Poster: <br>
         <input name="poster" value="${video.poster}">
-        <input name="poster_file" type="file">
     </div>
     <div>
         View Count: <br>
@@ -25,9 +24,9 @@
         <input name="description" value="${video.description}">
     </div>
     <div>
-        <button formaction="${base}/create">Create</button>
-        <button formaction="${base}/update">Update</button>
-        <button formaction="${base}/delete">Delete</button>
-        <a href="${base}/index">Reset</a>
+        <button formaction="${ctx}/create">Create</button>
+        <button formaction="${ctx}/update">Update</button>
+        <button formaction="${ctx}/delete">Delete</button>
+        <a href="${ctx}/index">Reset</a>
     </div>
 </form>

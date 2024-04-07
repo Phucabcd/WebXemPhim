@@ -25,9 +25,9 @@
         <input ${user.admin?'':'checked'} name="admin" type="radio" value="false"> User
     </div>
     <div>
-        <button formaction="${base}/create">Create</button>
-        <button formaction="${base}/update">Update</button>
-        <button formaction="${base}/delete">Delete</button>
-        <a href="${base}/index">Reset</a>
+        <button formaction="${ctx}/create">Create</button>
+        <button formaction="${ctx}/update">Update</button>
+        <button formaction="${ctx}/delete">Delete</button>
+        <a href="${ctx}/index">Reset</a>
     </div>
 </form>

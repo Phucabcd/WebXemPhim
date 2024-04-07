@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
 
-<c:set var="base" value="${pageContext.request.contextPath}/poly/adm/user" scope="request"/>
+<c:set var="ctx" value="${pageContext.request.contextPath}/oe/adm/account" scope="request"/>
 
 <!DOCTYPE html>
 <html>
